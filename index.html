@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple applicatin</title>
+    <style>
+        body{
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+        }
+        .container{
+            background-color: white;
+            width: 500px;
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .title{
+            text-align: center;
+            color: white;
+        }
+        .input{
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+        .ans{
+            text-align: center;
+            font-size: 20px;
+        }
+        .button{
+            display: block;
+            margin: 20px auto;
+            height: 30px;
+            width: 100px;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    
+        <h2 class="title">Rectangle Area Calculator</h2>
+        <div class="container">
+           Length: <input type="number" id="length" class="input">
+        <br>
+         Width: <input type="number" id="width" class="input">
+        <br>
+        <p class="ans" id="answer">Answer:</p>
+        <button onclick="calculate()" class="button">Calculate</button>
+        <br>
+        <button onclick="reset()" class="button">reset</button>
+        <br>
+
+
+        <script>
+            function calculate(){
+                const input1 = document.getElementById("length");
+
+                const input2 = document.getElementById("width");
+
+                const area = parseInt(input1.value) * parseInt(input2.value);
+                
+                const anselement =  document.getElementById("answer");
+
+                anselement.innerText = `answer: ${area}`
+                
+
+            }
+
+            function reset(){
+                const input1 = document.getElementById("length");
+
+                const input2 = document.getElementById("width");
+
+                const anselement =  document.getElementById("answer");
+
+                input1.value = "";
+                input2.value = "";
+
+                anselement.innerText ="";
+
+
+
+            }
+        </script>
+
+
+       
+    
+</body>
+</html>
